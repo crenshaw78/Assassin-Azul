@@ -4,14 +4,13 @@ import { Carousel } from "react-bootstrap";
 
 function Movies() {
   return (
-    <div className="s-bkgd flex-center padding-1 ">
+    <div className="s-bkgd flex-center padding-2">
       <h1>MOVIES SHOWN</h1>
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
         <Carousel>
           {movieList.map((movie, i) => (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
               <img
-                key={i}
                 src={require(`../assets/images/${movie.image}`).default}
                 alt={movie.title}
                 style={{ width: 200 }}

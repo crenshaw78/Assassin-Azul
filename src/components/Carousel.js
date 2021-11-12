@@ -3,7 +3,7 @@ import movieList from "../assets/js/array";
 
 function Carousel() {
   return (
-    <div className="p-bkgd flex-center padding-1 ">
+    <div className="p-bkgd flex-center padding-2">
       <h1>UNDER CONSTRUCTION</h1>
       <img
         key={movieList[0].title}

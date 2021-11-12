@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <div className="p-bkgd">
+    <div className="p-bkgd padding-1">
       <ul
         style={{
           display: "flex",
@@ -33,9 +33,7 @@ export default function Header() {
               Buy Tickets
             </Link>
           </Button> */}
-          <Button to="tickets" spy={true} smooth={true}>
-            Buy Tickets
-          </Button>
+          <Button to="tickets">Buy Tickets</Button>
         </li>
       </ul>
     </div>
