@@ -21,7 +21,32 @@ code {
   --tertiary-highlight: #b344b4;
 }
 
-.pri-bkgd {
+.p-bkgd {
   background-color: var(--primary);
   color: var(--primary-highlight);
+}
+
+.s-bkgd {
+  background-color: var(--secondary);
+  color: var(--primary-highlight);
+}
+
+.t-bkgd {
+  background-color: var(--tertiary);
+  color: var(--secondary);
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding-1 {
+  padding: 1rem 0 1rem 0;
+}
+
+.padding-2 {
+  padding: 2rem 0 2rem 0;
 }

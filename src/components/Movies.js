@@ -1,22 +1,30 @@
-import React from 'react';
-import movieList from '../assets/js/array'
+import React from "react";
+import movieList from "../assets/js/array";
+import { Carousel } from "react-bootstrap";
 
 function Movies() {
   return (
-    <div>
-      <h1>Movies Shown</h1>
-      <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
-        {movieList.map((movie, i) => (
-            <img
-              key={i}
-              src={require(`../assets/images/${movie.image}`).default}
-              alt={movie.title}
-              style={{width: 150, height: 300}}
+    <div className="s-bkgd flex-center padding-2">
+      <h1>MOVIES SHOWN</h1>
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+        <Carousel>
+          {movieList.map((movie, i) => (
+            <Carousel.Item key={i}>
+              <img
+                src={require(`../assets/images/${movie.image}`).default}
+                alt={movie.title}
+                style={{ width: 200 }}
               />
-        ))}
+              <Carousel.Caption>
+                <h3>{movie.title}</h3>
+                <p>{movie.subtitle}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
     </div>
-  )
-};
+  );
+}
 
 export default Movies;

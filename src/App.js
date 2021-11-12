@@ -1,14 +1,14 @@
+import React from "react";
+import Header from "./components/Header";
+import Carousel from "./components/Carousel";
+import Movies from "./components/Movies";
+import Newsletter from "./components/Newsletter";
+import Contact from "./components/Contact";
+import Tickets from "./components/Tickets";
+import "./App.css";
 
-
-import React from 'react';
-import Header from './components/Header';
-import Carousel from './components/Carousel';
-import Movies from './components/Movies';
-import Newsletter from './components/Newsletter';
-import Contact from './components/Contact';
-import Tickets from './components/Tickets';
-import './App.css';
-
+// Bootstrap CSS styling
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
@@ -30,4 +30,3 @@ export default function App() {
     </div>
   );
 }
-
