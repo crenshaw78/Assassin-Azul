@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { Button } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <div className="dark-bkgd">
+    <div className="p-bkgd">
       <ul
         style={{
           display: "flex",
@@ -27,9 +28,14 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Link to="tickets" spy={true} smooth={true}>
+          {/* <Button>
+            <Link to="tickets" spy={true} smooth={true}>
+              Buy Tickets
+            </Link>
+          </Button> */}
+          <Button to="tickets" spy={true} smooth={true}>
             Buy Tickets
-          </Link>
+          </Button>
         </li>
       </ul>
     </div>
