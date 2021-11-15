@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { Button } from "react-bootstrap";
 import theaterInfo from "../assets/js/theater";
 
-export default function Header() {
+export default function Footer() {
   return (
     <div className="p-bkgd padding-1">
       <ul

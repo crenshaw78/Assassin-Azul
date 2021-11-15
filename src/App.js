@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "./components/Header";
-import Carousel from "./components/Carousel";
+import Banner from "./components/Banner";
 import Movies from "./components/Movies";
 import Newsletter from "./components/Newsletter";
 import Contact from "./components/Contact";
 import Tickets from "./components/Tickets";
+import Footer from "./components/Footer"
 import "./App.css";
 
 // Bootstrap CSS styling
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Carousel />
+      <Banner />
       <div id="movies">
         <Movies />
       </div>
@@ -27,6 +28,7 @@ export default function App() {
       <div id="tickets">
         <Tickets />
       </div>
+      <Footer />
     </div>
   );
 }
