@@ -6,18 +6,19 @@ function Banner() {
   return (
     <div className="s-bkgd flex-center padding-2">
 
-        <Carousel>
+        <Carousel style= {{width: "80%"}} >
           {movieList.map((movie, i) => (
             <Carousel.Item key={i}>
-              <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-                <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
+              <div style={{ width:"80%", display: "flex", flexDirection: "row", flexWrap: "wrap", margin: "0 auto", padding: "27px", alignItems: "center" }}>
+                <div style={{ width: "50%", height: "50%", display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
                   <h3>{movie.title}</h3>
                   <p>{movie.subtitle}</p>
+                  <p>{movie.time}</p>
                 </div>
                 <img
                   src={require(`../assets/images/${movie.image}`).default}
                   alt={movie.title}
-                  style={{ width: 200 }}
+                  style={{ width: "50%" }}
                 />
               </div>
             </Carousel.Item>

@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Newsletter() {
   return (
     <div className="s-bkgd flex-center padding-2">
       <h1>JOIN NEWSLETTER</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+      <form>
+        <input type="text" name="name" value="Email Address" onSelect="handleNewsletter()" />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
   );
 }
