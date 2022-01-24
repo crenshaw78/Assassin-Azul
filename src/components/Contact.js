@@ -5,7 +5,7 @@ import theaterInfo from "../assets/js/theater";
 function Contact() {
   return (
     <div className="t-bkgd flex-center padding-2">
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "20px" }}>
         <h3>{theaterInfo.name}</h3>
         <h3>|</h3>
         <h3>{theaterInfo.address}</h3>

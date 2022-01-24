@@ -12,7 +12,7 @@ function Movies() {
               key={i}
               src={require(`../assets/images/${movie.image}`).default}
               alt={movie.title}
-              style={{width: 200, height: 300}}
+              style={{width: 200, height: 300, padding: 10}}
               />
         ))}
       </div>
