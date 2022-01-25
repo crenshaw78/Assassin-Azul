@@ -4,7 +4,7 @@ import Banner from "./components/Banner";
 import Movies from "./components/Movies";
 import Newsletter from "./components/Newsletter";
 import Contact from "./components/Contact";
-import Tickets from "./components/Tickets";
+import Specials from "./components/Specials";
 import Footer from "./components/Footer"
 import "./App.css";
 
@@ -19,14 +19,14 @@ export default function App() {
       <div id="movies">
         <Movies />
       </div>
+      <div>
+        <Specials />
+      </div>
       <div id="newsletter">
         <Newsletter />
       </div>
       <div id="contact">
         <Contact />
-      </div>
-      <div id="tickets">
-        <Tickets />
       </div>
       <Footer />
     </div>
