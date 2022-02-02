@@ -15,7 +15,7 @@ function Banner() {
                   <p style={{fontSize: "4vmin"}}>NOW PLAYING <span style={{ fontSize: "6vmin", color: "#1963ac" }}>{movie.time}</span></p>
                   <h3 style={{fontSize: "9vmin"}}>{movie.title}</h3>
                   <p style={{fontSize: "6vmin"}}>{movie.subtitle}</p>
-                  <Button style={{ width: "25%" }}>Buy Tickets</Button>
+                  <Button style={{width: "30%", borderRadius: "4vmin" }}>Buy Tickets</Button>
                 </div>
                 <img
                   src={require(`../assets/images/${movie.image}`).default}
