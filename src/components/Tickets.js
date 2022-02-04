@@ -1,9 +1,11 @@
 import React from 'react';
+import { Button } from "react-bootstrap";
 
 function Tickets() {
+
   return (
     <div>
-      <h1>Buy Tickets</h1>
+      <Button style={{borderRadius: "3vmin"}}>Buy Tickets</Button>
     </div>
   )
 };

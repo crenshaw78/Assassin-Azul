@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { Button } from "react-bootstrap";
 import theaterInfo from "../assets/js/theater";
+import Tickets from "../components/Tickets"
 
 export default function Header() {
+
   return (
     <div className="p-bkgd padding-1">
       <ul
@@ -39,7 +40,7 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Button>Buy Tickets</Button>
+          <Tickets />
         </li>
       </ul>
     </div>

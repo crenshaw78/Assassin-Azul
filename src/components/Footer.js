@@ -37,6 +37,7 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
+      <h3 style={{fontSize: "3vmin", textAlign: "right", paddingRight: 20}}>© 2022 Vali-Hi Drive-In Theatre, Inc.</h3>
     </div>
   );
 }
