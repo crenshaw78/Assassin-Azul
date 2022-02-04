@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
 import theaterInfo from "../assets/js/theater";
-import Tickets from "../components/Tickets"
+import { Button } from "react-bootstrap";
 
-export default function Header() {
+const Header = (props) => {
+
+  const handleClick = () => {
+    props.changeTicketStatus(true);
+  }
 
   return (
     <div className="p-bkgd padding-1">
@@ -40,9 +44,11 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Tickets />
+          <Button style={{borderRadius: "3vmin"}} onClick={() => handleClick()}>Buy Tickets</Button>
         </li>
       </ul>
     </div>
   );
 }
+
+export default Header;
