@@ -1,21 +1,34 @@
 import React from 'react';
-import { Button } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
+import theaterInfo from "../assets/js/theater";
 
 
 const Tickets = (props) => {
 
-  const handleClick = () => {
+  const closeTicketStore = () => {
     props.changeTicketStatus(false);
   }
 
   return (
     <div className="cart">
-      <ul>
-        <li>Adult</li>
-        <li>Child</li>
-        <li>Car</li>
-      </ul>
-      <Button style={{borderRadius: "3vmin"}} onClick={() => handleClick()}>Close</Button>
+      <div>
+        {theaterInfo.ticketType.map((ticket, j) => (
+          <Row>
+            <Col>{ticket.type}, ${ticket.price} </Col>
+            <Col>
+              <span>Qty:</span>
+              <input
+                type="number"
+                placeholder="0"
+              />
+            </Col>
+          </Row>
+        ))}
+      <br />
+      <div>Total: </div>  
+      <br />
+      </div>
+      <Button style={{borderRadius: "3vmin"}} onClick={() => closeTicketStore()}>Close</Button>
     </div>
   )
 };
