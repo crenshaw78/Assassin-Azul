@@ -15,18 +15,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
 
   const [ticketStore, setTicketStore] = useState(false);
-    const changeTicketStatus = (value) => {
-        setTicketStore(value);
-    };
+
+  const changeTicketStatus = (value) => {
+    setTicketStore(value);
+  };
+
+  const [featuredMovie, setFeaturedMovie] = useState (0);
+
+  const changeFeaturedMovie = (value) => {
+    console.log('in app.js '+value)
+    setFeaturedMovie(value);
+  }
 
   return (
       <div>
         {ticketStore&& (
           <Tickets changeTicketStatus={changeTicketStatus} />)}
         <Header changeTicketStatus={changeTicketStatus} />
-        <Banner changeTicketStatus={changeTicketStatus} />
+        <Banner changeTicketStatus={changeTicketStatus} changeFeaturedMovie={changeFeaturedMovie}/>
         <div id="movies">
-          <Movies />
+          <Movies featuredMovie={featuredMovie}/>
         </div>
         <div>
           <Specials />

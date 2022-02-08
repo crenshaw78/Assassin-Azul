@@ -14,10 +14,10 @@ const Tickets = (props) => {
   const [counter2, setCounter2] = useState(0);
 
   const incrementCounter = (ticketType) => {
-    if (ticketType == 0) {
+    if (ticketType === 0) {
       setCounter0(counter0 + 1);
     }
-    else if (ticketType == 1) {
+    else if (ticketType === 1) {
       setCounter1(counter1 + 1);
     }
     else {
@@ -26,12 +26,12 @@ const Tickets = (props) => {
   }
 
   const decrementCounter = (ticketType) => {
-    if (ticketType == 0) {
+    if (ticketType === 0) {
       if (counter0 > 0) {
         setCounter0(counter0 - 1);
       }
     }
-    else if (ticketType == 1) {
+    else if (ticketType === 1) {
       if (counter1 > 0) {
         setCounter1(counter1 - 1);
       }
@@ -44,10 +44,10 @@ const Tickets = (props) => {
   }
   
   const showQuantity = (ticketType) => {
-    if (ticketType == 0) {
+    if (ticketType === 0) {
       return counter0;
     }
-    else if (ticketType == 1) {
+    else if (ticketType === 1) {
       return counter1;
     }
     else {
