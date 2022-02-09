@@ -16,7 +16,7 @@ function App() {
 
   const [ticketStore, setTicketStore] = useState(false);
 
-  const changeTicketStatus = (value) => {
+  const toggleTicketStore = (value) => {
     setTicketStore(value);
   };
 
@@ -30,9 +30,9 @@ function App() {
   return (
       <div>
         {ticketStore&& (
-          <Tickets changeTicketStatus={changeTicketStatus} />)}
-        <Header changeTicketStatus={changeTicketStatus} />
-        <Banner changeTicketStatus={changeTicketStatus} changeFeaturedMovie={changeFeaturedMovie}/>
+          <Tickets toggleTicketStore={toggleTicketStore} />)}
+        <Header toggleTicketStore={toggleTicketStore} />
+        <Banner toggleTicketStore={toggleTicketStore} changeFeaturedMovie={changeFeaturedMovie}/>
         <div id="movies">
           <Movies featuredMovie={featuredMovie}/>
         </div>

@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 const Banner = (props) => {
 
   const handleClick = () => {
-    props.changeTicketStatus(true);
+    props.toggleTicketStore(true);
   }
 
   const setMovieKey = () => {
@@ -20,7 +20,7 @@ const Banner = (props) => {
 
         <Carousel onSlide={setMovieKey} style= {{width: "80%"}} >
           {movieList.map((movie, i) => (
-            <Carousel.Item id={i} key={i}>
+            <Carousel.Item id={i} key={'c'+i}>
               <div style={{ width:"80%", display: "flex", flexDirection: "row", flexWrap: "wrap", margin: "0 auto", padding: "27px", alignItems: "center" }}>
                 <div style={{ width: "50%", height: "50%", display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
                   <p style={{fontSize: "4vmin"}}>NOW PLAYING <span style={{ fontSize: "6vmin", color: "#1963ac" }}>{movie.time}</span></p>
