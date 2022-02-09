@@ -6,7 +6,7 @@ import theaterInfo from "../assets/js/theater";
 const Tickets = (props) => {
 
   const closeTicketStore = () => {
-    props.changeTicketStatus(false);
+    props.toggleTicketStore(false);
   }
 
   const [counter0, setCounter0] = useState(0);
