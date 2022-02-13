@@ -3,11 +3,11 @@ import movieList from "../assets/js/array";
 
 
 function Movies(props) {
-  const [movieWithExtraInfo, setMovieWithExtraInfo] = useState(props.featuredMovie);
+  const [movieWithExtraInfo, setMovieWithExtraInfo] = useState(props.displayedMovie);
 
   return (
     <div className="s-bkgd flex-center padding-2">
-      {console.log("featuredMovie = " + props.featuredMovie)}
+      {console.log("displayedMovie = " + props.displayedMovie)}
       {console.log("movieWithExtraInfo = " + movieWithExtraInfo)}
       <h1>MOVIES SHOWN</h1>
       <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
@@ -18,7 +18,7 @@ function Movies(props) {
               alt={movie.title}
               style={(movieWithExtraInfo === i) ? { width: 240, height: 360 } : { width: 200, height: 300 }}
               onMouseEnter={() => setMovieWithExtraInfo(i)}
-              onMouseLeave={() => setMovieWithExtraInfo(props.featuredMovie)}
+              onMouseLeave={() => setMovieWithExtraInfo(props.displayedMovie)}
               />
             {(movieWithExtraInfo === i) && (
                 <div style={{backgroundColor: "#6e9ee6", textAlign: "center", fontSize: "2vmin", paddingTop: 10}}>

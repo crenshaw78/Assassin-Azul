@@ -18,12 +18,12 @@ function Newsletter() {
       <h1>JOIN NEWSLETTER</h1>
       <p>Join our newsletter to recieve specials and promotions via email.</p>
       <form style={{lineHeight: "6vmin", width: "40%"}} onSubmit={handleSubmit}>
-        <input style={{width: "75%", borderRadius: "3vmin", paddingLeft: "3vmin", marginBottom: "3vmin"}} type="text" name="email" defaultValue="Email Address"
+        <input style={{width: "75%", borderRadius: "3vmin", paddingLeft: "3vmin", marginBottom: "3vmin", border: 0}} type="text" name="email" defaultValue="Email Address"
           onSelect={() => setFullForm(true)} />
-        <input style={{width: "20%", borderRadius: "3vmin", backgroundColor: "#6e9ee6", color: "#ffffff", marginLeft: 10 }} type="submit" value="Submit" />
+        <input style={{width: "20%", borderRadius: "3vmin", backgroundColor: "#6e9ee6", color: "#ffffff", marginLeft: 10, border: 0}} type="submit" value="Submit" />
         {fullForm && (
           <div>
-            <input style={{width: "75%", borderRadius: "3vmin", paddingLeft: "3vmin"}} type="text" name="name" defaultValue="Name" />
+            <input style={{width: "75%", borderRadius: "3vmin", paddingLeft: "3vmin", border:0}} type="text" name="name" defaultValue="Name" />
             <br />
             <label>
               <input name="agree" type="checkbox" checked={checked} onChange={handleInputChange} style={{marginRight: "2vmin"}} />
