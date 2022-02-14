@@ -20,11 +20,11 @@ function App() {
     setTicketStore(value);
   };
 
-  const [featuredMovie, setFeaturedMovie] = useState (0);
+  const [displayedMovie, setdisplayedMovie] = useState (0);
 
-  const changeFeaturedMovie = (value) => {
+  const changeDisplayedMovie = (value) => {
     console.log('in app.js '+value)
-    setFeaturedMovie(value);
+    setdisplayedMovie(value);
   }
 
   return (
@@ -32,9 +32,9 @@ function App() {
         {ticketStore&& (
           <Tickets toggleTicketStore={toggleTicketStore} />)}
         <Header toggleTicketStore={toggleTicketStore} />
-        <Banner toggleTicketStore={toggleTicketStore} changeFeaturedMovie={changeFeaturedMovie}/>
+        <Banner toggleTicketStore={toggleTicketStore} changeDisplayedMovie={changeDisplayedMovie}/>
         <div id="movies">
-          <Movies featuredMovie={featuredMovie}/>
+          <Movies displayedMovie={displayedMovie}/>
         </div>
         <div>
           <Specials />
