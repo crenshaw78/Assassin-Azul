@@ -9,18 +9,18 @@ const Banner = (props) => {
   const [movieBackground, setMovieBackground] = useState(0)
 
   const handleClick = () => {
-    props.toggleTicketStore(true);
+    props.setTicketStore(true);
   }
 
   const setMovieKey = () => {
     const elem = document.getElementsByClassName('active carousel-item')[0]
     console.log('in banner.js index = '+elem.id)
-    props.changeDisplayedMovie(elem.id);
+    props.setdisplayedMovie(elem.id);
     setMovieBackground(elem.id)
   }
 
   return (
-    <div className="p-bkgd flex-center padding-2" id={'movie'+movieBackground}>
+    <div className="movie-carousel p-bkgd flex-center padding-2" id={'movie'+movieBackground}>
 
         <Carousel onSlid={setMovieKey} style= {{width: "80%"}} >
           {movieList.map((movie, i) => (
@@ -37,7 +37,7 @@ const Banner = (props) => {
                 <img
                   src={require(`../assets/images/${movie.image}`).default}
                   alt={movie.title}
-                  style={{ width: "50%" }}
+                  style={{ width: "50%", padding: "20px" }}
                 />
               </div>
             </Carousel.Item>
