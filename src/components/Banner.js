@@ -3,6 +3,7 @@ import movieList from "../assets/js/array";
 import { Carousel } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { FaPlay } from "react-icons/fa";
+import { reduceEachLeadingCommentRange } from "typescript";
 
 const Banner = (props) => {
 
@@ -20,7 +21,7 @@ const Banner = (props) => {
   }
 
   return (
-    <div className="p-bkgd flex-center padding-2" id={'movie'+movieBackground}>
+    <div className="movie-carousel p-bkgd flex-center padding-2" id={'movie'+movieBackground}>
 
         <Carousel onSlid={setMovieKey} style= {{width: "80%"}} >
           {movieList.map((movie, i) => (
@@ -37,7 +38,7 @@ const Banner = (props) => {
                 <img
                   src={require(`../assets/images/${movie.image}`).default}
                   alt={movie.title}
-                  style={{ width: "50%" }}
+                  style={{ width: "50%", padding: "20px" }}
                 />
               </div>
             </Carousel.Item>
