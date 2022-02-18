@@ -3,7 +3,6 @@ import movieList from "../assets/js/array";
 import { Carousel } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { FaPlay } from "react-icons/fa";
-import { reduceEachLeadingCommentRange } from "typescript";
 
 const Banner = (props) => {
 
