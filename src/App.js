@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Tickets from "./components/Tickets";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
@@ -12,42 +12,50 @@ import "./App.css";
 // Bootstrap CSS styling
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+class App extends React.Component {
 
-  const [ticketStore, setTicketStore] = useState(false);
-
-  const toggleTicketStore = (value) => {
-    setTicketStore(value);
-  };
-
-  const [displayedMovie, setdisplayedMovie] = useState (0);
-
-  const changeDisplayedMovie = (value) => {
-    console.log('in app.js '+value)
-    setdisplayedMovie(value);
+  state = {
+      displayedMovie: 0,
+      ticketStore: false
   }
 
-  return (
-      <div>
-        {ticketStore&& (
-          <Tickets toggleTicketStore={toggleTicketStore} />)}
-        <Header toggleTicketStore={toggleTicketStore} />
-        <Banner toggleTicketStore={toggleTicketStore} changeDisplayedMovie={changeDisplayedMovie}/>
-        <div id="movies">
-          <Movies displayedMovie={displayedMovie}/>
-        </div>
+  setTicketStore = (value) => {
+    this.setState({
+      ticketStore: value
+    })
+  }
+
+  setdisplayedMovie = (value) => {
+    console.log(value);
+    this.setState({
+      displayedMovie: value
+    })
+  }
+
+  render() {
+
+    return (
         <div>
-          <Specials />
+          {this.state.ticketStore && (
+            <Tickets setTicketStore={this.setTicketStore} />)}
+          <Header setTicketStore={this.setTicketStore} />
+          <Banner setTicketStore={this.setTicketStore} setdisplayedMovie={this.setdisplayedMovie}/>
+          <div id="movies">
+            <Movies key = {'showMovie'+this.state.displayedMovie} displayedMovie={this.state.displayedMovie}/>
+          </div>
+          <div>
+            <Specials />
+          </div>
+          <div id="newsletter">
+            <Newsletter />
+          </div>
+          <div id="contact">
+            <Contact />
+          </div>
+          <Footer />
         </div>
-        <div id="newsletter">
-          <Newsletter />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-        <Footer />
-      </div>
-  );
+    );
+  }
 }
 
 export default App;

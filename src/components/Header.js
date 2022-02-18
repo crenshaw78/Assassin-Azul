@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 const Header = (props) => {
 
   const handleClick = () => {
-    props.toggleTicketStore(true);
+    props.setTicketStore(true);
   }
 
   return (

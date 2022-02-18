@@ -9,13 +9,13 @@ const Banner = (props) => {
   const [movieBackground, setMovieBackground] = useState(0)
 
   const handleClick = () => {
-    props.toggleTicketStore(true);
+    props.setTicketStore(true);
   }
 
   const setMovieKey = () => {
     const elem = document.getElementsByClassName('active carousel-item')[0]
     console.log('in banner.js index = '+elem.id)
-    props.changeDisplayedMovie(elem.id);
+    props.setdisplayedMovie(elem.id);
     setMovieBackground(elem.id)
   }
 
