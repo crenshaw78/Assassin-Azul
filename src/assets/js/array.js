@@ -1,50 +1,50 @@
 const movieList = [
   {
-    title: "Venom:",
-    subtitle: "Let There Be Carnage",
-    image: "venom-carnage.jpg",
+    title: "The Batman",
+    subtitle: "",
+    image: "batman.jpg",
     time: "9:00 PM",
-    trailer: "https://www.youtube.com/watch?v=-FmWuCgJmxo",
+    trailer: "https://www.youtube.com/watch?v=mqqft2x_Aa4",
     id: 0
   },
   {
-    title: "Halloween Kills",
+    title: "Sonic the Hedgehog 2",
     subtitle: "",
-    image: "halloween-kills.jpg",
+    image: "sonic.jpg",
     time: "9:00 PM",
-    trailer: "https://www.youtube.com/watch?v=hL6R3HmQfPc",
+    trailer: "https://www.youtube.com/watch?v=47r8FXYZWNU",
     id: 1
   },
   {
-    title: "Black Widow",
-    subtitle: "",
-    image: "black-widow.jpg",
+    title: "Fantastic Beasts:",
+    subtitle: "The Secrets of Dumbledore",
+    image: "fantastic.jpg",
     time: "9:00 PM",
-    trailer: "https://www.youtube.com/watch?v=Fp9pNPdNwjI",
+    trailer: "https://www.youtube.com/watch?v=DaM_wL1ZOM4",
     id: 2
   },
   {
-    title: "Dora",
-    subtitle: "and the Lost City of Gold",
-    image: "dora-lost-city.jpg",
+    title: "Everything Everywhere All at Once",
+    subtitle: "",
+    image: "everything.jpg",
     time: "11:00 PM",
-    trailer: "https://www.youtube.com/watch?v=gUTtJjV852c",
+    trailer: "https://www.youtube.com/watch?v=wxN1T1uxQ2g",
     id: 3
   },
   {
-    title: "World War Z",
+    title: "Morbius",
     subtitle: "",
-    image: "world-war-z.jpg",
+    image: "morbius.jpg",
     time: "11:00 PM",
-    trailer: "https://www.youtube.com/watch?v=Md6Dvxdr0AQ",
+    trailer: "https://www.youtube.com/watch?v=ImB7iPss11Q",
     id: 4
   },
   {
-    title: "John Wick",
+    title: "Father Stu",
     subtitle: "",
-    image: "john-wick.jpg",
+    image: "father.jpg",
     time: "11:00 PM",
-    trailer: "https://www.youtube.com/watch?v=2AUmvWm5ZDQ",
+    trailer: "https://www.youtube.com/watch?v=DHREzAdyCPs",
     id: 5
   }
 ]

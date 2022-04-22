@@ -32,7 +32,7 @@ class Movies extends React.Component {
                 onMouseLeave={() => this.setMovieWithExtraInfo(this.props.displayedMovie)}
                 />
               {(parseInt(this.state.movieWithExtraInfo) === movie.id) && (
-                  <div style={{backgroundColor: "#6e9ee6", textAlign: "center", fontSize: "2vmin", paddingTop: 10}}>
+                  <div style={{backgroundColor: "#6e9ee6", textAlign: "center", fontSize: "2vmin", paddingTop: 10, width: 240}}>
                     <p>{movie.title} {movie.subtitle}</p>
                     <p>{movie.time}</p>
                   </div>
