@@ -61,10 +61,14 @@
   background-color: #1963ac !important;
 }
 
+.movie-carousel {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #movie0 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("./assets/images/poster0.jpg");
-  background-color: rgba(0, 0, 0, 0.75);
 }
 
 #movie1 {

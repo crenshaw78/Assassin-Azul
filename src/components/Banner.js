@@ -20,7 +20,7 @@ const Banner = (props) => {
   }
 
   return (
-    <div className="movie-carousel p-bkgd flex-center padding-2" id={'movie'+movieBackground}>
+    <div className="movie-carousel p-bkgd flex-center" id={'movie'+movieBackground}>
 
         <Carousel onSlid={setMovieKey} style= {{width: "80%"}} >
           {movieList.map((movie, i) => (
